@@ -1,0 +1,27 @@
+
+<div class="ahov" style="z-index: 38">
+    <script>
+        $(function () {
+            $(".ahov dd").mouseover(function () {
+                $(".sideBoss").show();
+            });
+            $(".ahov dd").mouseleave(function () {
+                $(".sideBoss").hide();
+            });
+        });
+    </script>
+    <dd style="width: 200px;height: 600px;z-index: 38">
+        <div class="bbt" >
+            <div style="width:22px;padding-top: 6px;font-family: '微软雅黑';font-size: 18px;">显示店铺</div>
+        </div> 
+        <div class="sideBoss">
+            <volist name="shop" id="xc" >
+                <ul>
+                    <li>
+                        <a href="{:U('Revenue/index',array('shopid'=>$xc['id']))}"  title="{$xc.shop}" target="rightFrame"> {$xc.shop|msubstr=0,8,"utf-8",false} </a>
+                    </li>
+                </ul>
+            </volist>
+        </div>
+    </dd>
+</div>

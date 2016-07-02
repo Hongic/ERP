@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <script type="text/javascript" src="__PUBLIC__/JS/jquery.min.js"></script>
+        <link href="__PUBLIC__/CSS/bootstrap.css" rel="stylesheet"/>
+        <link href="__PUBLIC__/CSS/bootstrap-datetimepicker.css" rel="stylesheet"/>
+        <script src="__PUBLIC__/JS/bootstrap-datetimepicker.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="input-append date" id="datetimepicker" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+                <input class="span2" size="16" type="text" value="12-02-2012">
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div> 
+        </div>
+
+        <div>
+            <input type="text"   class="input-append date" id="datetime" data-date="2015-01-01 22:22" data-date-format="yyyy-mm-dd hh:ii">
+            <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+        <script>
+            $('#datetime').datetimepicker({
+                format: "yyyy-mm-dd hh:ii",
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                //   startView: 2,
+                forceParse: 0,
+                //   showMeridian: 1,
+                //maxView: 1,
+            });
+        </script>
+
+    </body>
+</html>

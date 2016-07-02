@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="gb2312" /> 
+        <title>遮罩层123</title> 
+        <style> 
+            html,body{ height:100%; margin:0; padding:0; font-size:14px;} 
+            p{ line-height:18px;} 
+            .mask{
+                height:100%;
+                width:100%; 
+                position:fixed; 
+                _position:absolute;
+                top:0; 
+                z-index:1000;
+                border-radius: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px; 
+            } 
+            .opacity{ 
+                opacity:0.3; 
+                filter: alpha(opacity=30);
+                background-color:#000;  
+                border-radius: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+            } 
+            .content{
+                min-height: 300px;
+                width:800px; 
+                overflow:auto; 
+                border:2px solid #ccc;
+                background-color:#fff; 
+                position:absolute; 
+                top:50%; 
+                left:50%;
+                margin:-300px auto auto -400px;
+                z-index:1001;
+                word-wrap: break-word;
+                padding:3px;
+                border-radius: 10px;
+                -moz-border-radius: 10px;
+                -webkit-border-radius: 10px;
+            } 
+            .ph{ height:100%;} 
+        </style> 
+    </head> 
+    <body> 
+        <p class="ph">底层</p> 
+        <div class="mask opacity"> 4546464</div> 
+        <div class="content"> 
+            最上层显示内容
+            <a href="{:U('Out/index')}" > 返回 </a>
+        </div> 
+    </body> 
+</html> 
